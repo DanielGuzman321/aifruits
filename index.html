@@ -3,9 +3,9 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>JOTCHUA</title>
+  <title>Ai Fruits On Solana</title>
   <link rel="icon" type="image/png"
-    href="../cdn.prod.website-files.com/664c43e90d550aa2d5871129/full-body-jotchua-v0-xlg2ul5q1pue1.webp" sizes="16x16">
+    href="../cdn.prod.website-files.com/664c43e90d550aa2d5871129/5.png" sizes="16x16">
   <meta content="width=device-width, initial-scale=1" name="viewport" />
   <link href="../cdn.prod.website-files.com/664c43e90d550aa2d5871129/css/template.css" rel="stylesheet"
     type="text/css" />
@@ -25,21 +25,6 @@
   <script
     type="text/javascript">window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('set', 'developer_id.dZGVlNj', true); gtag('config', 'G-L5EGG1HY6W');</script>
   <!-- Please keep this css code to improve the font quality-->
-  <style>
-    * {
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-
-    /* Corrige la fuente de los textos largos del FAQ */
-    .paragraph-left {
-      font-family: 'Minako', sans-serif !important;
-      font-weight: 400;
-      font-size: 1rem;
-      line-height: 1.6;
-      color: inherit;
-    }
-  </style>
 </head>
 
 <!-- Language chooser -->
@@ -97,73 +82,6 @@
   }
 </style>
 
-<div id="lang-backdrop" class="lang-backdrop" aria-modal="true" role="dialog">
-  <div class="lang-modal" role="document">
-    <h3 class="lang-title">¿Español?</h3>
-    <p class="lang-desc">Elige tu idioma - Choose your language</p>
-    <div class="lang-row">
-      <button id="btn-es" class="lang-btn primary">Español</button>
-      <button id="btn-en" class="lang-btn">English.
-        No español, bro? For real?</button>
-    </div>
-  </div>
-</div>
-
-<script>
-  (function () {
-    // rutas exactas de tus archivos
-    var ES_PATH = "index.html";
-    var EN_PATH = "indexen.html"; // si tu archivo es "indexen.HTML", respeta mayúsculas/minúsculas
-
-    // detectar si ya estás en la versión en inglés
-    var pathLower = location.pathname.toLowerCase();
-    var isOnEnglish =
-      pathLower.endsWith("/indexen.html") ||
-      pathLower.includes("indexen.");
-
-    // leer preferencia
-    var choice = localStorage.getItem("jotchua_lang");
-
-    function el(id) { return document.getElementById(id); }
-    function show() { var b = el("lang-backdrop"); if (b) b.style.display = "flex"; }
-    function hide() { var b = el("lang-backdrop"); if (b) b.style.display = "none"; }
-
-    function go(lang) {
-      localStorage.setItem("jotchua_lang", lang);
-      if (lang === "en" && !isOnEnglish) { location.href = EN_PATH; return; }
-      if (lang !== "en" && isOnEnglish) { location.href = ES_PATH; return; }
-      hide();
-    }
-
-    // Espera a que TODO cargue por si Webflow/otros scripts mueven el DOM
-    window.addEventListener("load", function () {
-      try {
-        // si no hay preferencia, por defecto español
-        if (!choice) {
-          choice = "es";
-          localStorage.setItem("jotchua_lang", "es");
-        }
-
-        // respeta preferencia y corrige si estás en la página equivocada
-        if (choice === "en" && !isOnEnglish) { location.replace(EN_PATH); return; }
-        if (choice !== "en" && isOnEnglish) { location.replace(ES_PATH); return; }
-
-        // si todo ok, muestra el modal para permitir cambiar
-        show();
-        el("btn-es") && el("btn-es").addEventListener("click", function () { go("es"); });
-        el("btn-en") && el("btn-en").addEventListener("click", function () { go("en"); });
-      } catch (e) {
-        console.error("Lang modal error:", e);
-        // Fallback ultra simple con confirm si algo falla (ES por defecto)
-        var ok = confirm("¿Seguro que no quieres la página en español? Le metimos cariño :C\nAceptar = Inglés, Cancelar = Español");
-        go(ok ? "en" : "es");
-      }
-    });
-  })();
-</script>
-
-
-
 <body>
   <div id="dont-delete-cuntt" class="dont-delete-cunt w-embed">
     <style>
@@ -179,21 +97,17 @@
     role="banner" class="navbar w-nav">
     <div class="page-padding">
       <div class="nav_container"><a href="index.html" class="w-nav-brand"><img
-            src="../cdn.prod.website-files.com/664c43e90d550aa2d5871129/LOGO1.png" loading="lazy" sizes="75px"
-            srcset="../cdn.prod.website-files.com/664c43e90d550aa2d5871129/LOGO1.png 500w" alt="" class="fjfjf" /></a>
-        <nav role="navigation" class="nav-menu w-nav-menu"><a href="#about" class="nav-link w-nav-link">ACERCA DE</a><a
-            href="#roadmap" class="nav-link w-nav-link">TOKENOMICS</a><a href="#faq"
-            class="nav-link w-nav-link">FAQ</a><a href="#team" class="nav-link w-nav-link">MEMES</a></nav>
+            src="../cdn.prod.website-files.com/664c43e90d550aa2d5871129/LOGO1.png" loading="lazy" sizes="200px"
+            srcset="../cdn.prod.website-files.com/664c43e90d550aa2d5871129/LOGO1.png 1000w" alt="" class="fjfjf" /></a>
+        <nav role="navigation" class="nav-menu w-nav-menu"><a href="#about" class="nav-link w-nav-link">ABOUT</a><a
+            href="#roadmap" class="nav-link w-nav-link">TOKENOMICS</a><a href="#team" class="nav-link w-nav-link">MEMES</a></nav>
         <div class="menu-button w-nav-button">
           <div class="icon w-icon-nav-menu"></div>
         </div>
-        <div class="navbar-socials"><a href="https://dexscreener.com/solana/fbg6ndgqfrhnkt5ypdycmam8amchuohtchsuvcxcvyuv" target="_blank"
+        <div class="navbar-socials"><a href="https://dexscreener.com/solana/j6y6hays1regoas8hx5fuhb9cfmevyqaadckimy1z3me" target="_blank"
             class="social-link-blocks-navbar w-inline-block"><img
               src="../cdn.prod.website-files.com/664c43e90d550aa2d5871129/6670ee42df0096b4e3f7bfb4_icons8-stocks-96.png"
-              loading="lazy" width="52" alt="" /><a href="https://t.me/jotchuaonsol69" target="_blank"
-              class="social-link-blocks-navbar w-inline-block"><img
-                src="../cdn.prod.website-files.com/664c43e90d550aa2d5871129/6670ee55c1fd03e1a353b243_icons8-telegram-96.png"
-                loading="lazy" width="56" alt="" /></a><a href="https://x.com/secretolaunch" target="_blank"
+              loading="lazy" width="52" alt="" /><a href="https://x.com/ai_fruitssol" target="_blank"
               class="social-link-blocks-navbar w-inline-block"><img
                 src="./cdn.prod.website-files.com/664c43e90d550aa2d5871129/x.png"
                 loading="lazy" width="56" alt="" />
@@ -279,27 +193,27 @@
                 <div class="margin-bottom margin-large">
                   <div class="padding-bottom padding-large">
                     <div class="centered-flexbox deee3"><img class="image"
-                        src="/cdn.prod.website-files.com/664c43e90d550aa2d5871129/IMG1.png" alt="" style="opacity:0"
+                        src="/cdn.prod.website-files.com/664c43e90d550aa2d5871129/5.png" alt="" style="opacity:0"
                         sizes="(max-width: 479px) 83vw, 200px" data-w-id="1fda6b62-9c07-7002-cb29-39d741e13265"
-                        loading="lazy" srcset="/cdn.prod.website-files.com/664c43e90d550aa2d5871129/IMG1.png 500w" />
+                        loading="lazy" srcset="/cdn.prod.website-files.com/664c43e90d550aa2d5871129/5.png 500w" />
                     </div>
                   </div>
                 </div>
                 <div class="margin-vertical margin-large">
                   <div class="centered-flexbox _333ddd oo33">
-                    <h1 class="hero-heading">JOTCHUA</h1>
+                    <h1 class="hero-heading">Ai Fruits</h1>
                   </div>
                 </div>
                 <div class="centered-flexbox gsvgs"><a data-w-id="10025fcc-34d1-8682-75ce-bc0e78f88542"
-                    style="opacity:0" href="https://pump.fun/coin/HgsRtriiWu2s1XvBJpwemSuHo8MxbkB5Pbmnt7BTpump" target="_blank" class="button w-button">COMPRAR AHORA</a>
+                    style="opacity:0" href="https://pump.fun/coin/FpmqWATGKYRA7yfBqew9ZsTfmQnX9P6dk8YYrpFMpump" target="_blank" class="button w-button">BUY NOW</a>
                 </div>
               </div>
             </div>
           </div>
           <div class="div-heart-image"><img
-              src="../cdn.prod.website-files.com/664c43e90d550aa2d5871129/full-body-jotchua-v0-xlg2ul5q1pue1.webp"
+              src="../cdn.prod.website-files.com/664c43e90d550aa2d5871129/1.png"
               loading="lazy" sizes="77px"
-              srcset="../cdn.prod.website-files.com/664c43e90d550aa2d5871129/full-body-jotchua-v0-xlg2ul5q1pue1.webp 500w"
+              srcset="../cdn.prod.website-files.com/664c43e90d550aa2d5871129/1.png 500w"
               alt="" class="image-2" /></div>
         </div>
         <div class="absolute-div-clouds">
@@ -315,10 +229,7 @@
         <div class="banner-text">
           <div data-w-id="9b489022-2ebe-b4ef-ccb7-b8a808691d6d"
             style="-webkit-transform:translate3d(-5px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(-5px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(-5px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(-5px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
-            class="banner-text-block"> TE QUIERO MUCHO WE - TE QUIERO MUCHO WE - TE QUIERO MUCHO WE - TE QUIERO MUCHO WE
-            - TE QUIERO MUCHO WE - TE QUIERO MUCHO WE - TE QUIERO MUCHO WE - TE QUIERO MUCHO WE - TE QUIERO MUCHO WE -
-            TE QUIERO MUCHO WE - TE QUIERO MUCHO WE - TE QUIERO MUCHO WE - TE QUIERO MUCHO WE - TE QUIERO MUCHO WE - TE
-            QUIERO MUCHO WE - TE QUIERO MUCHO WE - </div>
+            class="banner-text-block"> Ai fruits eating fruits 🍎🍐🍌🫐🍓🍋🥝 - Ai fruits eating fruits 🍎🍐🍌🫐🍓🍋🥝 - Ai fruits eating fruits 🍎🍐🍌🫐🍓🍋🥝 - Ai fruits eating fruits 🍎🍐🍌🫐🍓🍋🥝 - Ai fruits eating fruits 🍎🍐🍌🫐🍓🍋🥝 - Ai fruits eating fruits 🍎🍐🍌🫐🍓🍋🥝 - Ai fruits eating fruits 🍎🍐🍌🫐🍓🍋🥝 - Ai fruits eating fruits 🍎🍐🍌🫐🍓🍋🥝 -</div>
         </div>
       </div>
       <section id="about" class="section-about">
@@ -328,18 +239,13 @@
               <div class="about-content">
                 <div class="margin-top margin-xxlarge">
                   <div class="centered-flexbox">
-                    <h2 class="text-align-center">🐶 Acerca de JOTCHUA Coin</h2>
+                    <h2 class="text-align-center">About Ai Fruits</h2>
                   </div>
                 </div>
                 <div class="margin-top margin-small">
                   <div class="centered-flexbox">
                     <div class="margin-small">
-                      <p class="paragraph-centered">JOTCHUA Coin nace del legendario meme del perrito Jotchua, símbolo
-                        de humor, misterio y comunidad en internet. Lo que empezó como una simple foto se convirtió en
-                        un ícono de los shitposts y ahora evoluciona en la blockchain.
-
-                        Más que una memecoin, JOTCHUA es un tributo a la cultura digital y al poder de los memes para
-                        unir a miles de personas en torno a la risa, la creatividad y la descentralización.
+                      <p class="paragraph-centered">Ai fruits eating fruits 🍎🍐🍌🫐🍓🍋🥝
                     </div>
                   </div>
                 </div>
@@ -396,9 +302,9 @@
       </section>
       <section id="roadmap" class="section-roadmap">
         <div class="div-leaf-image"><img
-            src="../cdn.prod.website-files.com/664c43e90d550aa2d5871129/full-body-jotchua-v0-xlg2ul5q1pue1.webp"
+            src="../cdn.prod.website-files.com/664c43e90d550aa2d5871129/5.png"
             loading="lazy" sizes="85px"
-            srcset="../cdn.prod.website-files.com/664c43e90d550aa2d5871129/full-body-jotchua-v0-xlg2ul5q1pue1.webp 500w"
+            srcset="../cdn.prod.website-files.com/664c43e90d550aa2d5871129/5.png 500w"
             alt="" class="fff33" /></div>
         <div class="roadmap-component">
           <div class="roadmap-content">
@@ -406,14 +312,14 @@
               <div class="page-padding">
                 <div class="margin-top margin-xxlarge">
                   <div class="centered-flexbox">
-                    <h2 class="text-align-center _55tttt rtrr">CA: HgsRtriiWu2s1XvBJpwemSuHo8MxbkB5Pbmnt7BTpump</h2>
+                    <h2 class="text-align-center _55tttt rtrr">CA: FpmqWATGKYRA7yfBqew9ZsTfmQnX9P6dk8YYrpFMpump</h2>
                   </div>
                 </div>
                 <div class="margin-top margin-small">
                   <div class="centered-flexbox">
-                    <h1 class="tokon jnjnj">100M JOTCHUA&#x27;s</h1>
-                    <h1 class="tokon">Renunciado</h1>
-                    <h1 class="tokon">LP Bloqueada</h1>
+                    <h1 class="tokon jnjnj">1B AI FRUIT&#x27;s</h1>
+                    <h1 class="tokon">Renounced</h1>
+                    <h1 class="tokon">Locked LP</h1>
                   </div>
                 </div>
               </div>
@@ -422,107 +328,6 @@
         </div>
       </section>
 
-      <section id="faq" class="section-faq">
-        <div class="faq-component">
-          <div class="faq-content">
-            <div class="container-medium">
-              <div class="page-padding">
-                <div class="centered-flexbox">
-                  <div class="margin-bottom margin-small">
-                    <h2 class="text-align-center uyy">FAQ</h2>
-                  </div>
-                </div>
-                <div class="margin-top margin-small">
-                  <div data-hover="false" data-delay="0" class="items_content-dropdown w-dropdown">
-                    <div class="items_content-dropdown-toggle w-dropdown-toggle">
-                      <div class="items_content-dropdown-flexbox">
-                        <div class="text-block"><strong class="bold-text">❓ ¿Qué es Jotchua?</strong></div>
-                      </div>
-                      <div class="w-icon-dropdown-toggle"></div>
-                    </div>
-                    <nav class="items_content-dropdown-list w-dropdown-list">
-                      <div class="margin-custom1">
-                        <p class="paragraph-left">Un perrito legendario, nacido en internet, mitad meme y mitad
-                          profecía. Algunos dicen que su mirada trae paz, otros que trae dinero. La verdad: trae risas y
-                          shitposts en la blockchain. 🐶✨</p>
-                      </div>
-                    </nav>
-                  </div>
-                </div>
-                <div class="margin-top margin-small">
-                  <div data-hover="false" data-delay="0" class="items_content-dropdown w-dropdown">
-                    <div class="items_content-dropdown-toggle w-dropdown-toggle">
-                      <div class="items_content-dropdown-flexbox">
-                        <div class="text-block"><strong class="bold-text-2">❓ ¿Tiene utilidad esta memecoin?
-                          </strong></div>
-                      </div>
-                      <div class="w-icon-dropdown-toggle"></div>
-                    </div>
-                    <nav class="items_content-dropdown-list w-dropdown-list">
-                      <div class="margin-custom1">
-                        <p class="paragraph-left">Claro que sí: hacerte reír mientras holdeas. ¿Pagos internacionales?
-                          No. ¿Revolucionar la banca? Tampoco. ¿Convertir memes en oro digital? Posiblemente sí. 🚀
-                        </p>
-                      </div>
-                    </nav>
-                  </div>
-                </div>
-                <div class="margin-top margin-small">
-                  <div data-hover="false" data-delay="0" class="items_content-dropdown w-dropdown">
-                    <div class="items_content-dropdown-toggle w-dropdown-toggle">
-                      <div class="items_content-dropdown-flexbox">
-                        <div class="text-block"><strong class="bold-text-3">❓ ¿Cuándo sube?</strong></div>
-                      </div>
-                      <div class="w-icon-dropdown-toggle"></div>
-                    </div>
-                    <nav class="items_content-dropdown-list w-dropdown-list">
-                      <div class="margin-custom1">
-                        <p class="paragraph-left">La pregunta milenaria… Subirá cuando Jotchua lo decida. O cuando tu
-                          primo el que "sabe de cripto" diga “compra ya”.
-                          Mientras tanto: to the moon en nuestra imaginación 🌕🐕💸<strong><em>‍</em></strong></p>
-                      </div>
-                    </nav>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="faq-left"><img
-              src="../cdn.prod.website-files.com/664c43e90d550aa2d5871129/full-body-jotchua-v0-xlg2ul5q1pue1.webp"
-              loading="lazy" width="152" sizes="(max-width: 479px) 100vw, 152px" alt=""
-              srcset="../cdn.prod.website-files.com/664c43e90d550aa2d5871129/full-body-jotchua-v0-xlg2ul5q1pue1.webp 500w, ../cdn.prod.website-files.com/664c43e90d550aa2d5871129/full-body-jotchua-v0-xlg2ul5q1pue1.webp 800w"
-              class="faq-image _1" /><img
-              src="../cdn.prod.website-files.com/664c43e90d550aa2d5871129/full-body-jotchua-v0-xlg2ul5q1pue1.webp"
-              loading="lazy" width="152" sizes="(max-width: 479px) 100vw, 193.70611572265625px" alt=""
-              srcset="../cdn.prod.website-files.com/664c43e90d550aa2d5871129/full-body-jotchua-v0-xlg2ul5q1pue1.webp 500w, ../cdn.prod.website-files.com/664c43e90d550aa2d5871129/full-body-jotchua-v0-xlg2ul5q1pue1.webp 800w"
-              class="faq-image _2 cwce" /><img
-              src="../cdn.prod.website-files.com/664c43e90d550aa2d5871129/full-body-jotchua-v0-xlg2ul5q1pue1.webp"
-              loading="lazy" width="152" sizes="(max-width: 479px) 100vw, 152px" alt=""
-              srcset="../cdn.prod.website-files.com/664c43e90d550aa2d5871129/full-body-jotchua-v0-xlg2ul5q1pue1.webp 500w, ../cdn.prod.website-files.com/664c43e90d550aa2d5871129/full-body-jotchua-v0-xlg2ul5q1pue1.webp 800w"
-              class="faq-image _3" /></div>
-          <div class="faq-right"><img
-              src="../cdn.prod.website-files.com/664c43e90d550aa2d5871129/full-body-jotchua-v0-xlg2ul5q1pue1.webp"
-              loading="lazy" width="152" sizes="(max-width: 479px) 100vw, (max-width: 1919px) 152px, 8vw" alt=""
-              srcset="../cdn.prod.website-files.com/664c43e90d550aa2d5871129/full-body-jotchua-v0-xlg2ul5q1pue1.webp 500w, ../cdn.prod.website-files.com/664c43e90d550aa2d5871129/full-body-jotchua-v0-xlg2ul5q1pue1.webp 800w"
-              class="faq-image _4 _4ffer weecwe" /><img
-              src="../cdn.prod.website-files.com/664c43e90d550aa2d5871129/664c462b3cdcb4616af8540b_Paw.png"
-              loading="lazy" width="152"
-              sizes="(max-width: 479px) 100vw, (max-width: 991px) 152px, (max-width: 1279px) 19vw, (max-width: 1919px) 185.318115234375px, 10vw"
-              alt=""
-              srcset="../cdn.prod.website-files.com/664c43e90d550aa2d5871129/full-body-jotchua-v0-xlg2ul5q1pue1.webp 500w, ../cdn.prod.website-files.com/664c43e90d550aa2d5871129/full-body-jotchua-v0-xlg2ul5q1pue1.webp 800w"
-              class="faq-image _5 deed" /><img
-              src="../cdn.prod.website-files.com/664c43e90d550aa2d5871129/full-body-jotchua-v0-xlg2ul5q1pue1.webp"
-              loading="lazy" width="152" sizes="(max-width: 479px) 100vw, 152px" alt=""
-              srcset="../cdn.prod.website-files.com/664c43e90d550aa2d5871129/full-body-jotchua-v0-xlg2ul5q1pue1.webp 500w, ../cdn.prod.website-files.com/664c43e90d550aa2d5871129/full-body-jotchua-v0-xlg2ul5q1pue1.webp 800w"
-              class="faq-image _6" /></div>
-        </div>
-        <div class="div-flower-image"><img
-            src="../cdn.prod.website-files.com/664c43e90d550aa2d5871129/full-body-jotchua-v0-xlg2ul5q1pue1.webp"
-            loading="lazy" width="90" sizes="77px" alt=""
-            srcset="../cdn.prod.website-files.com/664c43e90d550aa2d5871129/full-body-jotchua-v0-xlg2ul5q1pue1.webp 500w"
-            class="rferfer _9393k3" />
-        </div>
-      </section>
       <section id="team" class="section-team">
         <div class="team-component">
           <div class="team-content">
@@ -538,44 +343,41 @@
                     <div class="team-grid">
                       <div class="margin-small"><img loading="lazy"
                           sizes="(max-width: 479px) 100vw, (max-width: 767px) 91vw, (max-width: 1279px) 26vw, 272px"
-                          srcset="/cdn.prod.website-files.com/664c43e90d550aa2d5871129/M1.jpg 500w" alt=""
+                          srcset="/cdn.prod.website-files.com/664c43e90d550aa2d5871129/M1.gif 500w" alt=""
                           class="team-image" />
                         <div class="flexbox-team">
                           <div class="margin-top margin-small">
-                            <h3 class="heading-7">CEO de JOTCHUA</h3>
+                            <h3 class="heading-7">🍐</h3>
                           </div>
                           <div class="margin-top margin-xsmall">
-                            <div class="text-size-medium text-align-center">“De meme a leyenda, y de leyenda a
-                              millonada.” 💸</div>
+                            <div class="text-size-medium text-align-center">"Born from code, powered by juice." 🍐</div>
                           </div>
                         </div>
                       </div>
                       <div class="margin-small"><img loading="lazy"
                           sizes="(max-width: 479px) 100vw, (max-width: 767px) 91vw, (max-width: 1279px) 26vw, 272px"
-                          srcset="/cdn.prod.website-files.com/664c43e90d550aa2d5871129/M2.jpg 500w" alt=""
+                          srcset="/cdn.prod.website-files.com/664c43e90d550aa2d5871129/M2.gif 500w" alt=""
                           class="team-image" />
                         <div class="flexbox-team">
                           <div class="margin-top margin-small">
-                            <h3 class="heading-8">Inversor nivel leyenda</h3>
+                            <h3 class="heading-8">🍎</h3>
                           </div>
                           <div class="margin-top margin-xsmall">
-                            <div class="text-size-medium text-align-center">“Vendí mi casa, pero gané un Jotchua.”
-                              🏠➡️🐕
+                            <div class="text-size-medium text-align-center">"I sold my brain, but I bought Ai Fruit." 🍎🤖
                             </div>
                           </div>
                         </div>
                       </div>
                       <div class="margin-small"><img loading="lazy"
                           sizes="(max-width: 479px) 100vw, (max-width: 767px) 91vw, (max-width: 1279px) 26vw, 272px"
-                          srcset="/cdn.prod.website-files.com/664c43e90d550aa2d5871129/M3.jpg 500w" alt=""
+                          srcset="/cdn.prod.website-files.com/664c43e90d550aa2d5871129/M3.gif 500w" alt=""
                           class="team-image" />
                         <div class="flexbox-team">
                           <div class="margin-top margin-small">
-                            <h3 class="heading-9">Miner oficial de JOTCHUA</h3>
+                            <h3 class="heading-9">🍉</h3>
                           </div>
                           <div class="margin-top margin-xsmall">
-                            <div class="text-size-medium text-align-center">“Cada bloque minado es una croqueta para el
-                              perrito.” 🍖⛏️
+                            <div class="text-size-medium text-align-center">"Every slice mined makes the market sweeter." 🍉💎
                             </div>
                           </div>
                         </div>
@@ -588,77 +390,33 @@
           </div>
         </div>
       </section>
-
-      <!-- <div class="section-about-founder">
-        <section class="section-2">
-          <h2 class="text-align-center _95959 yyy">how to buy</h2>
-          <div class="w-layout-blockcontainer container w-container">
-            <div data-duration-in="400" data-duration-out="200" data-current="Tab 2" data-easing="ease"
-              class="home-punks_component w-tabs">
-              <div id="w-node-e8b695be-0356-0320-fb06-bd6c657c5156-d587115f" class="home-punks_tabs-menu w-tab-menu"><a
-                  data-w-tab="Tab 1" class="home-punks_tabs-link blue w-inline-block w-tab-link">
-                  <h5 class="home-punks_heading-medium">1. buy RED</h5>
-                </a><a data-w-tab="Tab 2" class="home-punks_tabs-link red w-inline-block w-tab-link w--current">
-                  <h5 class="home-punks_heading-medium">2. swap for $TEMPLATE coin by pasting CA on ??</h5>
-                </a><a data-w-tab="Tab 3" class="home-punks_tabs-link purple w-inline-block w-tab-link">
-                  <h5 class="home-punks_heading-medium">3. hold and Contribute</h5>
-                </a></div>
-              <div class="w-tab-content">
-                <div data-w-tab="Tab 1" class="w-tab-pane">
-                  <div class="home-punks__image-wrapper"><img loading="lazy"
-                      sizes="(max-width: 479px) 100vw, (max-width: 767px) 94vw, (max-width: 991px) 698px, 415px"
-                      src="/cdn.prod.website-files.com/664c43e90d550aa2d5871129/844.jpg" alt=""
-                      class="home-punks_image" /></div>
-                </div>
-                <div data-w-tab="Tab 2" class="w-tab-pane w--tab-active">
-                  <div class="home-punks__image-wrapper"><img
-                      sizes="(max-width: 479px) 100vw, (max-width: 767px) 94vw, (max-width: 991px) 698px, 415px"
-                      src="/cdn.prod.website-files.com/664c43e90d550aa2d5871129/844.jpg" loading="eager"
-                      class="home-punks_image" /></div>
-                </div>
-                <div data-w-tab="Tab 3" class="w-tab-pane">
-                  <div class="home-punks__image-wrapper"><img
-                      sizes="(max-width: 479px) 100vw, (max-width: 767px) 94vw, (max-width: 991px) 698px, 415px"
-                      src="/cdn.prod.website-files.com/664c43e90d550aa2d5871129/844.jpg" loading="eager"
-                      class="home-punks_image" /></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div> -->
       <div class="service-banner">
         <div class="service-text">
           <div data-w-id="b519cf41-9ae7-3692-cefc-6ff57ebed5d7"
             style="-webkit-transform:translate3d(0px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
-            class="text-block-3">EL PERRO CREADOR DEL SEXO - EL PERRO CREADOR DEL SEXO - EL PERRO CREADOR DEL SEXO - EL
-            PERRO CREADOR DEL SEXO - EL PERRO CREADOR DEL SEXO - EL PERRO CREADOR DEL SEXO -
+            class="text-block-3">Ai fruits eating fruits 🍎🍐🍌🫐🍓🍋🥝 - Ai fruits eating fruits 🍎🍐🍌🫐🍓🍋🥝 - Ai fruits eating fruits 🍎🍐🍌🫐🍓🍋🥝 - Ai fruits eating fruits 🍎🍐🍌🫐🍓🍋🥝 - Ai fruits eating fruits 🍎🍐🍌🫐🍓🍋🥝 - Ai fruits eating fruits 🍎🍐🍌🫐🍓🍋🥝 - Ai fruits eating fruits 🍎🍐🍌🫐🍓🍋🥝 - Ai fruits eating fruits 🍎🍐🍌🫐🍓🍋🥝 -
           </div>
         </div>
       </div>
       <footer id="footer" class="footer">
         <div class="w-container">
-          <a href="https://dexscreener.com/solana/fbg6ndgqfrhnkt5ypdycmam8amchuohtchsuvcxcvyuv" target="_blank" class="wj2j button _22jj2 w-button">Dex
-            Screener</a><a href="https://pump.fun/coin/HgsRtriiWu2s1XvBJpwemSuHo8MxbkB5Pbmnt7BTpump" class="wj2j button _22jj2 iuiu w-button">PUMPFUN</a>
+          <a href="https://pump.fun/coin/FpmqWATGKYRA7yfBqew9ZsTfmQnX9P6dk8YYrpFMpump" class="wj2j button _22jj2 iuiu w-button">PUMP.FUN</a>
         </div>
         <div class="footer-flex-container">
-          <div class="navbar-socials"><a href="https://dexscreener.com/solana/fbg6ndgqfrhnkt5ypdycmam8amchuohtchsuvcxcvyuv" target="_blank"
+          <div class="navbar-socials"><a href="https://ener.com/solana/j6y6hays1regoas8hx5fuhb9cfmevyqaadckimy1z3me" target="_blank"
               class="social-link-blocks-navbar w-inline-block"><img
                 src="../cdn.prod.website-files.com/664c43e90d550aa2d5871129/6670ee42df0096b4e3f7bfb4_icons8-stocks-96.png"
-                loading="lazy" width="52" alt="" /><a href="https://t.me/jotchuaonsol69" target="_blank"
-                class="social-link-blocks-navbar w-inline-block"><img
-                  src="../cdn.prod.website-files.com/664c43e90d550aa2d5871129/6670ee55c1fd03e1a353b243_icons8-telegram-96.png"
-                  loading="lazy" width="56" alt="" /></a><a href="https://x.com/secretolaunch" target="_blank"
+                loading="lazy" width="52" alt="" /><a href="https://x.com/ai_fruitssol" target="_blank"
               class="social-link-blocks-navbar w-inline-block"><img
                 src="./cdn.prod.website-files.com/664c43e90d550aa2d5871129/x.png"
                 loading="lazy" width="56" alt="" />
               </a></div>
         </div>
         <div class="margin-bottom margin-small hhhhhuuu"><img
-            src="../cdn.prod.website-files.com/664c43e90d550aa2d5871129/full-body-jotchua-v0-xlg2ul5q1pue1.webp"
+            src="../cdn.prod.website-files.com/664c43e90d550aa2d5871129/5.png"
             loading="lazy" width="82"
             sizes="(max-width: 479px) 56vw, (max-width: 1279px) 82px, (max-width: 1439px) 6vw, 82px" alt=""
-            srcset="../cdn.prod.website-files.com/664c43e90d550aa2d5871129/full-body-jotchua-v0-xlg2ul5q1pue1.webp 500w, ../cdn.prod.website-files.com/664c43e90d550aa2d5871129/full-body-jotchua-v0-xlg2ul5q1pue1.webp 800w, ../cdn.prod.website-files.com/664c43e90d550aa2d5871129/full-body-jotchua-v0-xlg2ul5q1pue1.webp 1960w" />
+            srcset="../cdn.prod.website-files.com/664c43e90d550aa2d5871129/5.png 500w, ../cdn.prod.website-files.com/664c43e90d550aa2d5871129/5.png 800w, ../cdn.prod.website-files.com/664c43e90d550aa2d5871129/5.png 1960w" />
         </div>
   </div>
   </footer>
